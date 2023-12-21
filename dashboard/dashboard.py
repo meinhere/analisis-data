@@ -55,7 +55,7 @@ def create_rfm_df(df):
     return rfm_df
 
 # Load cleaned data
-main_data_df = pd.read_csv("D:\Project\dicoding-analisis-data\dashboard\main_data.csv")
+main_data_df = pd.read_csv("https://raw.githubusercontent.com/meinhere/analisis-data/main/dashboard/main_data.csv")
 
 datetime_columns = ["order_purchase_timestamp", "order_estimated_delivery_date"]
 main_data_df.sort_values(by="order_purchase_timestamp", inplace=True)
@@ -160,7 +160,7 @@ with col1:
     ax.tick_params(axis='y', labelsize=20)
     ax.tick_params(axis='x', labelsize=15)
     st.pyplot(fig)
-    
+
 with col2:
     fig, ax = plt.subplots(figsize=(20, 10))
 
